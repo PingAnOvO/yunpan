@@ -1,9 +1,6 @@
 <template>
   <footer class="footer">
     <div class="icons">
-      <a :href="homeUrl" target="_blank" rel="noopener noreferrer" class="icon-link" title="个人主页">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M575.8 255.5c0 18-15 32.1-32 32.1l-32 0 .7 160.2c0 2.7-.2 5.4-.5 8.1l0 16.2c0 22.1-17.9 40-40 40l-16 0c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1L416 512l-24 0c-22.1 0-40-17.9-40-40l0-24 0-64c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32 14.3-32 32l0 64 0 24c0 22.1-17.9 40-40 40l-24 0-31.9 0c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2l-16 0c-22.1 0-40-17.9-40-40l0-112c0-.9 0-1.9 .1-2.8l0-69.7-32 0c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"></path></svg>
-      </a>
       <a :href="telegramUrl" target="_blank" rel="noopener noreferrer" class="icon-link" title="Telegram">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M248 8C111 8 0 119 0 256S111 504 248 504 496 393 496 256 385 8 248 8zM363 176.7c-3.7 39.2-19.9 134.4-28.1 178.3-3.5 18.6-10.3 24.8-16.9 25.4-14.4 1.3-25.3-9.5-39.3-18.7-21.8-14.3-34.2-23.2-55.3-37.2-24.5-16.1-8.6-25 5.3-39.5 3.7-3.8 67.1-61.5 68.3-66.7 .2-.7 .3-3.1-1.2-4.4s-3.6-.8-5.1-.5q-3.3 .7-104.6 69.1-14.8 10.2-26.9 9.9c-8.9-.2-25.9-5-38.6-9.1-15.5-5-27.9-7.7-26.8-16.3q.8-6.7 18.5-13.7 108.4-47.2 144.6-62.3c68.9-28.6 83.2-33.6 92.5-33.8 2.1 0 6.6 .5 9.6 2.9a10.5 10.5 0 0 1 3.5 6.7A43.8 43.8 0 0 1 363 176.7z"/></svg>
       </a>
@@ -22,29 +19,16 @@
       访问次数：<span id="vercount_value_site_pv">😯</span>次 | 访客人数：<span id="vercount_value_site_uv">😯</span>人
     </div>
 
-    <div class="project-links">
-      <strong>项目:</strong><a href="https://github.com/willow-god/FlareDrive-R2" target="_blank"
-        rel="noopener noreferrer">FlareDrive-R2</a>
-      <strong>作者:</strong><a href="https://github.com/willow-god" target="_blank"
-        rel="noopener noreferrer">LiuShen</a>
-      <strong>初始项目:</strong><a href="https://github.com/ljxi/Cloudflare-R2-oss" target="_blank"
-        rel="noopener noreferrer">Cloudflare-R2-OSS</a>
-    </div>
-
-    <div class="powered">Powered by <a href="https://workers.cloudflare.com/" target="_blank"
-        rel="noopener noreferrer">Cloudflare Workers</a></div>
-
-    <div style="margin:10px 0;">© 2025 FlareDrive. All rights reserved.</div>
+    <div style="margin:10px 0;">© 2025 恶霸PD. All rights reserved.</div>
   </footer>
 </template>
 
 <script>
-export default {
-  name: "Footer",
+export 默认 {
+  name: "Footer"，
   data() {
     return {
-      homeUrl: "https://www.liushen.fun/",
-      telegramUrl: "https://t.me/+855184500953",
+      telegramUrl: "https://t.me/+50935318069",
       musicUrl: "https://wyy.pdovo.dpdns.org",
       tvUrl: "https://tv.pdovo.ggff.net",
       emailUrl: "mailto:pinganoxo@gmail.com"
@@ -86,38 +70,5 @@ export default {
 .stats {
   margin: 10px 0;
   color: #444;
-}
-
-.project-links {
-  font-size: 14px;
-  color: #444;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 15px;
-  text-align: center;
-}
-
-.project-links a {
-  color: #444;
-  text-decoration: none;
-}
-
-.project-links a:hover {
-  color: #222;
-}
-
-.powered {
-  margin-top: 10px;
-  color: #444;
-}
-
-.powered a {
-  color: #444;
-  text-decoration: none;
-}
-
-.powered a:hover {
-  color: #222;
 }
 </style>
