@@ -25,7 +25,7 @@
 
 <script>
 export 默认 {
-  name: "Footer"，
+  name: "Footer",
   data() {
     return {
       telegramUrl: "https://t.me/+50935318069",
