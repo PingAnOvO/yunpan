@@ -19,7 +19,7 @@
       访问次数：<span id="vercount_value_site_pv">{{ pageViews }}</span>次 | 访客人数：<span id="vercount_value_site_uv">{{ uniqueVisitors }}</span>人
     </div>
 
-    <div style="margin:10px 0;">© 2025 FlareDrive. All rights reserved.</div>
+    <div style="margin:10px 0;">© 2025 恶霸PD. All rights reserved.</div>
   </footer>
 </template>
 
