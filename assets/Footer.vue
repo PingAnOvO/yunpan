@@ -16,30 +16,55 @@
     </div>
 
     <div class="stats">
-      访问次数：<span id="busuanzi_value_site_pv">😯</span>次 | 访客人数：<span id="busuanzi_value_site_uv">😯</span>人
+      访问次数：<span id="vercount_value_site_pv">{{ pageViews }}</span>次 | 访客人数：<span id="vercount_value_site_uv">{{ uniqueVisitors }}</span>人
     </div>
 
-    <div style="margin:10px 0;">© 2025 恶霸PD. All rights reserved.</div>
+    <div style="margin:10px 0;">© 2025 FlareDrive. All rights reserved.</div>
   </footer>
 </template>
 
 <script>
-export 默认 {
-  name: "Footer"，
+export default {
+  name: "Footer",
   data() {
     return {
       telegramUrl: "https://t.me/+50935318069",
       musicUrl: "https://wyy.pdovo.dpdns.org",
       tvUrl: "https://tv.pdovo.ggff.net",
-      emailUrl: "mailto:pinganoxo@gmail.com"
+      emailUrl: "mailto:pinganoxo@gmail.com",
+      pageViews: 0,
+      uniqueVisitors: 0
     };
-  }，
+  },
   mounted() {
-    // 加载不蒜子 Busuanzi
-    const script = document.createElement('script');
-    script.src = '//busuanzi.ibruce.info/busuanzi.pure.mini.js';
-    script.async = true;
-    document.body.appendChild(script);
+    this.updateStatistics();
+  },
+  methods: {
+    updateStatistics() {
+      // 获取当前统计信息
+      let stats = JSON.parse(localStorage.getItem('website_stats') || '{"pv":0,"uv":0}');
+      
+      // 检查是否是新会话（30分钟过期）
+      const sessionKey = 'user_session';
+      const sessionExpiry = 30 * 60 * 1000; // 30分钟
+      const now = Date.now();
+      const sessionData = JSON.parse(sessionStorage.getItem(sessionKey) || '{"timestamp":0}');
+      
+      if (now - sessionData.timestamp > sessionExpiry) {
+        // 新会话或会话过期
+        stats.uv += 1; // 增加独立访客数
+        sessionStorage.setItem(sessionKey, JSON.stringify({ timestamp: now }));
+      }
+      
+      stats.pv += 1; // 增加页面访问量
+      
+      // 保存更新后的统计
+      localStorage.setItem('website_stats', JSON.stringify(stats));
+      
+      // 更新显示
+      this.pageViews = stats.pv;
+      this.uniqueVisitors = stats.uv;
+    }
   }
 };
 </script>
