@@ -1,4 +1,3 @@
-
 <template>
   <footer class="footer">
     <div class="icons">
@@ -17,16 +16,16 @@
     </div>
 
     <div class="stats">
-      访问次数：<span id="vercount_value_site_pv">😯</span>次 | 访客人数：<span id="vercount_value_site_uv">😯</span>人
+      访问次数：<span id="busuanzi_value_site_pv">😯</span>次 | 访客人数：<span id="busuanzi_value_site_uv">😯</span>人
     </div>
 
-        <div style="margin:10px 0;">© 2025 FlareDrive. All rights reserved.</div>
+    <div style="margin:10px 0;">© 2025 恶霸PD. All rights reserved.</div>
   </footer>
 </template>
 
 <script>
-export default {
-  name: "Footer",
+export 默认 {
+  name: "Footer"，
   data() {
     return {
       telegramUrl: "https://t.me/+50935318069",
@@ -34,6 +33,13 @@ export default {
       tvUrl: "https://tv.pdovo.ggff.net",
       emailUrl: "mailto:pinganoxo@gmail.com"
     };
+  }，
+  mounted() {
+    // 加载不蒜子 Busuanzi
+    const script = document.createElement('script');
+    script.src = '//busuanzi.ibruce.info/busuanzi.pure.mini.js';
+    script.async = true;
+    document.body.appendChild(script);
   }
 };
 </script>
