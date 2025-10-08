@@ -19,28 +19,16 @@
       访问次数：<span id="vercount_value_site_pv">😯</span>次 | 访客人数：<span id="vercount_value_site_uv">😯</span>人
     </div>
 
-    <div class="project-links">
-      <strong>项目:</strong><a href="https://github.com/willow-god/FlareDrive-R2" target="_blank"
-        rel="noopener noreferrer">FlareDrive-R2</a>
-      <strong>作者:</strong><a href="https://github.com/willow-god" target="_blank"
-        rel="noopener noreferrer">LiuShen</a>
-      <strong>初始项目:</strong><a href="https://github.com/ljxi/Cloudflare-R2-oss" target="_blank"
-        rel="noopener noreferrer">Cloudflare-R2-OSS</a>
-    </div>
-
-    <div class="powered">Powered by <a href="https://workers.cloudflare.com/" target="_blank"
-        rel="noopener noreferrer">Cloudflare Workers</a></div>
-
     <div style="margin:10px 0;">© 2025 FlareDrive. All rights reserved.</div>
   </footer>
 </template>
 
 <script>
-export default {
-  name: "Footer",
+export 默认 {
+  name: "Footer"，
   data() {
     return {
-      telegramUrl: "https://t.me/+50935318069",
+      telegramUrl: "https://t.me/+855184500953"，
       musicUrl: "https://wyy.pdovo.dpdns.org",
       tvUrl: "https://tv.pdovo.ggff.net",
       emailUrl: "mailto:pinganoxo@gmail.com"
@@ -62,71 +50,29 @@ export default {
 .icons {
   display: flex;
   justify-content: center;
-  gap: 24px; /* 增加间距 */
+  gap: 24px;
   margin-bottom: 25px;
 }
 
 .icon-link {
-  width: 32px; /* 稍微增大图标 */
+  width: 32px;
   height: 32px;
   display: inline-block;
   fill: #2c2c2c;
   transition: fill 0.3s, transform 0.3s;
-  padding: 8px; /* 增加内边距 */
-  border-radius: 8px; /* 圆角 */
+  padding: 8px;
+  border-radius: 8px;
 }
 
 .icon-link:hover {
   fill: #444;
   transform: scale(1.15);
-  background-color: #f0f0f0; /* 悬停背景 */
+  background-color: #f0f0f0;
 }
 
 .stats {
   margin: 15px 0;
   color: #444;
   font-size: 15px;
-}
-
-.project-links {
-  font-size: 14px;
-  color: #444;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px; /* 增加间距 */
-  text-align: center;
-  margin: 15px 0;
-}
-
-.project-links a {
-  color: #444;
-  text-decoration: none;
-  padding: 4px 8px;
-  border-radius: 4px;
-  transition: background-color 0.3s;
-}
-
-.project-links a:hover {
-  color: #222;
-  background-color: #f5f5f5;
-}
-
-.powered {
-  margin-top: 15px;
-  color: #444;
-}
-
-.powered a {
-  color: #444;
-  text-decoration: none;
-  padding: 2px 6px;
-  border-radius: 4px;
-  transition: background-color 0.3s;
-}
-
-.powered a:hover {
-  color: #222;
-  background-color: #f5f5f5;
 }
 </style>
