@@ -40,7 +40,7 @@ export default {
   name: "Footer",
   data() {
     return {
-      telegramUrl: "https://t.me/+855184500953",
+      telegramUrl: "https://t.me/+50935318069",
       musicUrl: "https://wyy.pdovo.dpdns.org",
       tvUrl: "https://tv.pdovo.ggff.net",
       emailUrl: "mailto:pinganoxo@gmail.com"
@@ -53,7 +53,7 @@ export default {
 .footer {
   margin-top: 30px;
   text-align: center;
-  padding: 20px;
+  padding: 30px 20px;
   background-color: #ffffff77;
   font-size: 16px;
   border-radius: 50% 50% 0 0;
@@ -62,26 +62,30 @@ export default {
 .icons {
   display: flex;
   justify-content: center;
-  gap: 16px;
+  gap: 24px; /* 增加间距 */
   margin-bottom: 25px;
 }
 
 .icon-link {
-  width: 28px;
-  height: 28px;
+  width: 32px; /* 稍微增大图标 */
+  height: 32px;
   display: inline-block;
   fill: #2c2c2c;
   transition: fill 0.3s, transform 0.3s;
+  padding: 8px; /* 增加内边距 */
+  border-radius: 8px; /* 圆角 */
 }
 
 .icon-link:hover {
   fill: #444;
-  transform: scale(1.1);
+  transform: scale(1.15);
+  background-color: #f0f0f0; /* 悬停背景 */
 }
 
 .stats {
-  margin: 10px 0;
+  margin: 15px 0;
   color: #444;
+  font-size: 15px;
 }
 
 .project-links {
@@ -90,30 +94,39 @@ export default {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 15px;
+  gap: 20px; /* 增加间距 */
   text-align: center;
+  margin: 15px 0;
 }
 
 .project-links a {
   color: #444;
   text-decoration: none;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
 }
 
 .project-links a:hover {
   color: #222;
+  background-color: #f5f5f5;
 }
 
 .powered {
-  margin-top: 10px;
+  margin-top: 15px;
   color: #444;
 }
 
 .powered a {
   color: #444;
   text-decoration: none;
+  padding: 2px 6px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
 }
 
 .powered a:hover {
   color: #222;
+  background-color: #f5f5f5;
 }
 </style>
